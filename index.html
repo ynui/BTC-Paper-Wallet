@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+    <script src="./index.js"></script>
+    <script src="src/jquery-3.2.1.js"></script>
+    <script src="src/bitcoinjs-3.3.2.js"></script>
+    <script src="src/jsbip39.js"></script>
+    <script src="src/sjcl-bip39.js"></script>
+    <script src="src/wordlist_english.js"></script>
+    <script src="src/biginteger.js"></script>
+    <script src="src/index.js"></script>
+    <script src="src/bitcoin.js"></script>
+    <script src="src/qrcode.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<div class="split left">
+        <h1>BTC Wallet Generator</h1>
+        Clicking "Create Wallet" will generate a new random BTC wallet.
+        <br>
+        For bip38 encryption enter password.
+        <br>
+        For bip38 decryption enter address to decrypt and it's password.
+        <br>
+        
+        <h2>Generate New Wallet</h2>
+        <input id="autoPassword" type="text" placeholder="Enter Password (optional):"/>
+        <br>
+        <button onclick="Start()">Create Wallet</button>
+        
+        <br><br><br>
+        <h4>______________________________________________________________________</h4>
+        <h2>Bip38 Encrypt</h2>
+        <input id="addToEncrypt" type="text" placeholder="Enter private key to encrypt:" style="width: 500px;"/>
+        <br>
+        <input id="passToEncrypt" type="text" placeholder="Enter Password:"/>
+        <br>
+        <button onclick="encryptBip38(addToEncrypt.value,passToEncrypt.value)">Encrypt bip38</button>
+        <br>
+        <br><br>
+        <p id="t_bip38FromInput"/>
+        <p id="qr_bip38FromInput"/>
+        <br><br><br>
+        <h4>______________________________________________________________________</h4>
+        <h2>Bip38 Decrypt</h2>
+        <input id="addToDecrypt" typ="text" placeholder="Enter bip38 address to decrypt:" style="width: 500px;"/>
+        <br>
+        <input id="passToDecrypt" type="text" placeholder="Enter Password:"/>
+        <br>
+        <button onclick="decryptBip38(addToDecrypt.value,passToDecrypt.value)">Decrypt bip38</button>
+        <p id="t_decryptedBip38"/>
+        <br><br>
+        <h4>______________________________________________________________________</h4>
+        <br><br>
+        <p>Yuval Niezni - ynui12@gmail.com</p>
+</div>
+<div class="split right">
+        <p id="t_seed"/>
+        <p id="t_add"/>
+        <p id="qr_add"/>
+        <p id="t_pk"/>
+        <p id="qr_pk"/>
+        <p id="t_bip38pk"/>
+        <p id="qr_bip38"/>
+        <p id="t_password"/>
+</div>
+
+</body>
+</html>
