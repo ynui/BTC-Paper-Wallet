@@ -1,5 +1,15 @@
 html{
     font-family: cursive;
+	background-color: gray;
+}
+
+input{
+	background-color: darkgrey;
+    -webkit-text-fill-color: darkslategray;
+}
+
+button{
+	background-color: darkgray;
 }
 
 .split {
@@ -19,6 +29,7 @@ html{
   /* Control the right side */
   .right {
     right: 0;
+	text-align: -webkit-center;
   }
 
   .bottom{
